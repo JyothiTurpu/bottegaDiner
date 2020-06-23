@@ -5,7 +5,7 @@ const commentVault = [
 'Awesome!',
 'Incredible Choice!',
 'Fantastic Option!',
-"That's My Favourote Tooo!",
+"That's My Favourite Tooo!",
 "This Cooks In No Time!",
 "That's Our Restaurants All Time Favourite!"
 ];
@@ -29,10 +29,10 @@ const sidesMenuPrices = {
 };
 
 
-const processingOrder = (totalPrice) => {
+const processingOrder = (individualSplit) => {
   alert('Processing Your Order');
   document.querySelector('.comment').innerHTML = commentVault[Math.floor(Math.random() * (commentVault.length - 0) + 0)];
-  document.querySelector('.price').innerHTML ='Your Total Is: $'+totalPrice;
+  document.querySelector('.price').innerHTML = individualSplit.join('<br>');
 }
 
 
@@ -42,18 +42,25 @@ const orderNow = () => {
   const mainMenu = document.querySelectorAll('input.mainmenu');
   const sidesMenu = document.querySelectorAll('input.sidesmenu');
   var totalPrice = 0.0;
+  var individualSplit = [];
 
   for( var i = 0; i < mainMenu.length; i++) {
-    if(mainMenu[i].checked)
+    if(mainMenu[i].checked){
       totalPrice += mainMenuPrices[mainMenu[i].value];
+      individualSplit.push(mainMenu[i].value + ': $' + mainMenuPrices[mainMenu[i].value]);
+    }
   }
 
   for( var i = 0; i < sidesMenu.length; i++) {
-    if(sidesMenu[i].checked)
+    if(sidesMenu[i].checked){
       totalPrice += sidesMenuPrices[sidesMenu[i].value];
+      individualSplit.push(sidesMenu[i].value + ': $' + sidesMenuPrices[sidesMenu[i].value]);
+    }
   }
 
-  processingOrder(totalPrice);
+  individualSplit.push('Your Total Is: $'+totalPrice);
+
+  processingOrder(individualSplit);
 }
 
 
