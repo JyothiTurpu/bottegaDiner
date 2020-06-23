@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bottega Diner</title>
+  <link href="fontawesome/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div class="header">
+      <h1>Welcome to Bottega Diner!</h1>
+      <h2>My name is Louis and I will be your server for this evening. Take a look at our menu.</h2>
+      <h3>You get one entree and two side choices at regular cost.</h3>
+  </div>
+
+  <div class="content">
+      <div class="content-menu">
+        <div class="content-main-menu">
+            <h3>Main Menu</h3>
+                <div><input type="checkbox"  class='mainmenu'  id="burger" value="burger"><label for="burger">Burger</label></div> 
+                <div><input type="checkbox"  class='mainmenu'  id="pizza" value="pizza"><label for="pizza">Pizza</label></div>
+                <div><input type="checkbox"  class='mainmenu'  id="hotdog" value="hotdog"><label for="hotdog">Hotdog</label></div>
+                <div><input type="checkbox"  class='mainmenu'  id="burrito" value="burrito"><label for="burrito">Burrito</label></div>
+                <div><input type="checkbox"  class='mainmenu'  id="sandwich" value="sandwich"><label for="sandwich">Sandwich</label></div>
+                <div><input type="checkbox"  class='mainmenu'  id="chicken" value="chicken"><label for="chicken">Chicken</label></div>
+                <div><input type="checkbox"  class='mainmenu'  id="salad" value="salad"><label for="salad">Salad</label></div>
+        </div>
+        
+        <div class="content-sides-menu">
+            <h4>Sides Menu</h4>
+                <div><input type="checkbox"  class='sidesmenu'  id="fries" value="fries"><label for="fries">Fries</label></div> 
+                <div><input type="checkbox"  class='sidesmenu'  id="carrot" value="carrot"><label for="carrot">Carrot</label></div>
+                <div><input type="checkbox"  class='sidesmenu'  id="celery" value="celery"><label for="celery">Celery</label></div>
+                <div><input type="checkbox"  class='sidesmenu'  id="mashed potatoes" value="mashed potatoes"><label for="mashed potatoes">Mashed Potatoes</label></div>
+                <div><input type="checkbox"  class='sidesmenu'  id="broccoli" value="broccoli"><label for="broccoli">Broccoli</label></div>
+                <div><input type="checkbox"  class='sidesmenu'  id="ranch" value="ranch"><label for="ranch">Ranch</label></div>
+                <div><input type="checkbox"  class='sidesmenu'  id="blue cheese" value="blue cheese"><label for="blue cheese">Blue Cheese</label></div>
+        </div>
+      </div>
+
+      <div class="content-order-now">
+          <button  class="btn" type="submit" onclick=orderNow()>ORDER NOW</button>
+      </div>
+
+      <div class="content-display-comment-price">
+            <p class="comment"></p>
+            <p class="price"></p>    
+      </div>
+  </div>
+
+  <div class="footer">
+        <div class="footer-image1">
+            <img src="https://cache.dominos.com/olo/6_24_1/assets/build/images/img/footer-links/dpz-coke.png" alt="Coca-Cola -- Complete your Order with a Drink">
+            <img src="https://cache.dominos.com/olo/6_24_1/assets/build/images/img/footer-links/dpz-dairy.png" alt="Delivering Dairy Goodness">
+        </div>    
+
+        <div class="footer-image2">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+        </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
